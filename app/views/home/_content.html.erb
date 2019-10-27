@@ -1,0 +1,26 @@
+<div class="task-content">
+      <div class="task-content__list">
+        <h2 class="task-content__list-title">
+        <%= content.text %>
+        </h2>
+        <%= link_to new_content_card_path(content) do %>
+          <h2 class="task-content__list-add">
+            カードを追加
+          </h2>
+        <% end %>
+        <div class="task-content__list-box">
+          <%= content.cards.each do |card| %>
+            <%= link_to content_card_path(content,card) do %>
+              <div class="task-content__list-box__card">
+                <h2 class="task-content__list-box__card-title">
+                  <%= card.title %>
+                </h2>
+                <h2 class="task-content__list-box__card-datetime">
+                  <%= card.datetime.strftime("%-m月%-d日 %-H時%-M分") %>
+                </h2>
+              </div>
+            <% end %>
+          <%end%>
+        </div>
+      </div>
+    </div>

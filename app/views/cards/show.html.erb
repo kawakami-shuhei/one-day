@@ -1,0 +1,29 @@
+<div class="new-container">
+  <%= render '/home/header' %>
+
+  <div class="card-content">
+    <div class="card-box">
+      <h2 class="card-add">
+        カード詳細
+      </h2>
+      <div class="card-show__title-box">
+        <p class="card-show__title-box__text">タイトル</p>
+        <h2 class="card-show__title-box__title">
+          <%= @card.title %>
+        </h2>
+      </div>
+      <div class="card-show__datetime-box">
+        <p class="card-show__datetime-box__text">終了予定</p>
+        <h2 class="card-show__datetime-box__datetime">
+          <%= @card.datetime.strftime("%-m月%-d日 %-H時%-M分") %>
+        </h2>
+      </div>
+      <div class="card-show__comment__box">
+        <p class="card-show__comment__box__text">コメント</p>
+        <h2 class="card-show__comment__box__comment">
+          <%= @card.comment %>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>

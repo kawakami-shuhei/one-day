@@ -1,0 +1,18 @@
+<div class="new-container">
+  <%= render '/home/header' %>
+
+  <div class="card-content">
+    <div class="card-box">
+      <%= form_with model: [@content,@card], local: true do |f| %>
+        <h2 class="card-add">
+          カードを追加
+        </h2>
+        <%= f.text_field :title, type: "text", class: "card-title", placeholder: "タイトルを入力してください" %>
+        <p class="date-text">終了予定</p>
+        <%= f.datetime_select :datetime, {use_two_digit_numbers:true, discard_year: true}, class: "card-date" %>
+        <%= f.text_area :comment, type: "text", class: "card-comment", placeholder: "コメントを入力してください" %>
+        <%= f.submit "追加する", class: "card-button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
