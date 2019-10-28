@@ -1,5 +1,5 @@
 .card-show__title-box{
-  margin-top: 50px;
+  margin-top: 40px;
 
   &__text{
     font-size: 20px;
@@ -11,7 +11,7 @@
 }
 
 .card-show__datetime-box{
-  margin-top: 50px;
+  margin-top: 40px;
 
   &__text{
     font-size: 20px;
@@ -23,7 +23,7 @@
 }
 
 .card-show__comment__box{
-  margin-top: 50px;
+  margin-top: 40px;
 
   &__text{
     font-size: 20px;
@@ -31,5 +31,34 @@
 
   &__comment{
     font-size: 30px;
+  }
+}
+
+.card-edit__box{
+  margin-top: 40px;
+  background: gray;
+  height: 50px;
+  width: 45%;
+  display: inline-block;
+  
+
+  .card-edit__button{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 25px
+  }
+}
+
+.card-delete__box{
+  display: inline-block;
+  margin-left: 58px;
+  background: gray;
+  height: 50px;
+  width: 45%;
+
+  .card-delete__button{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 25px
   }
 }
