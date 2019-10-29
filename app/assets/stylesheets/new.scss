@@ -1,16 +1,15 @@
 .new-container{
   background: white;
-  height: 100vh;
 
   .card-content{
-    height: calc(100vh - 60px);
 
     .card-box{
       width: 1000px;
-      height: calc(100vh - 60px);
       margin: 0 auto;
       background: rgb(201, 201, 201);
       padding: 20px 180px;
+      height: calc(100vh - 60px);
+      overflow: scroll;
 
       .card-add{
         font-size: 25px;

@@ -10,17 +10,19 @@
         <% end %>
         <div class="task-content__list-box">
           <%= content.cards.each do |card| %>
-            <%= link_to content_card_path(content,card) do %>
-              <div class="task-content__list-box__card">
-                <h2 class="task-content__list-box__card-title">
-                  <%= card.title %>
-                </h2>
-                <h2 class="task-content__list-box__card-datetime">
-                  <%= card.datetime.strftime("%-m月%-d日 %-H時%-M分") %>
-                </h2>
-              </div>
-            <% end %>
-          <%end%>
+            <div class="task-content__list-box__div">
+              <%= link_to content_card_path(content,card) do %>
+                <div class="task-content__list-box__div-card">
+                  <h2 class="task-content__list-box__div-card__title">
+                    <%= card.title %>
+                  </h2>
+                  <h2 class="task-content__list-box__div-card__datetime">
+                    <%= card.datetime.strftime("%-m月%-d日 %-H時%-M分") %>
+                  </h2>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

@@ -1,5 +1,29 @@
 <div class="header">
-  <h1 class="title">
+  <div class="title">
     <%= link_to "One-day", root_path %>
-  </h1>
+  </div>
+  <% if user_signed_in? %>
+    <div class="logout">
+      <%= link_to destroy_user_session_path do %>
+        <div class="log-out">
+          <h2 class="log-out__text">ログアウト</h2>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="devise">
+      <div class="login">
+        <%= link_to new_user_session_path do %>
+          <div class="log-in">
+            <h2 class="log-in__text">ログイン</h2>
+          </div>
+        <% end %>
+      </div>
+      <%= link_to new_user_registration_path do %>
+        <div class="new-user">
+          <h2 class="new-user__text">新規登録</h2>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>

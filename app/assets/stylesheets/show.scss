@@ -34,31 +34,42 @@
   }
 }
 
-.card-edit__box{
+.button-box{
+  display: flex;
+  justify-content: space-between;
   margin-top: 40px;
-  background: gray;
-  height: 50px;
-  width: 45%;
-  display: inline-block;
-  
 
-  .card-edit__button{
-    text-align: center;
-    padding-top: 5px;
-    font-size: 25px
+  .card-edit{
+
+    &__box{
+      background: gray;
+      height: 50px;
+      width: 270px;
+      
+
+      &-button{
+        text-align: center;
+        padding-top: 5px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
   }
-}
 
-.card-delete__box{
-  display: inline-block;
-  margin-left: 58px;
-  background: gray;
-  height: 50px;
-  width: 45%;
+  .card-delete{
+    // margin-left: 58px;
 
-  .card-delete__button{
-    text-align: center;
-    padding-top: 5px;
-    font-size: 25px
+    &__box{
+      background: gray;
+      height: 50px;
+      width: 270px;
+
+      &-button{
+        text-align: center;
+        padding-top: 5px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
   }
 }

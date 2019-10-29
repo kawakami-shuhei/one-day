@@ -24,20 +24,26 @@
           <%= @card.comment %>
         </h2>
       </div>
-      <%= link_to edit_content_card_path do %>
-        <div class="card-edit__box">
-          <h2 class="card-edit__button">
-            カードを編集
-          </h2>
+      <div class="button-box">
+        <div class="card-edit">
+          <%= link_to edit_content_card_path do %>
+            <div class="card-edit__box">
+              <h2 class="card-edit__box-button">
+                カードを編集
+              </h2>
+            </div>
+          <%end%>
         </div>
-      <%end%>
-      <%= link_to content_card_path, method: :delete do %>
-        <div class="card-delete__box">
-          <h2 class="card-delete__button">
-            カードを削除
-          </h2>
+        <div class="card-delete">
+          <%= link_to content_card_path, method: :delete do %>
+            <div class="card-delete__box">
+              <h2 class="card-delete__box-button">
+                カードを削除
+              </h2>
+            </div>
+          <%end%>
         </div>
-      <%end%>
+      </div>
     </div>
   </div>
 </div>
