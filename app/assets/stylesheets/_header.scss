@@ -13,6 +13,23 @@
     
   }
 
+  .logout{
+    margin-right: 30px;
+    padding-top: 5px;
+
+    .log-out{
+      background: rgb(201, 201, 201);
+      height: 40px;
+      width: 80px;
+
+      &__text{
+        text-align: center;
+        padding-top: 7px; 
+        font-weight: bold;
+      }
+    }
+  }
+
   .devise{
     display: flex;
     padding-top: 5px;

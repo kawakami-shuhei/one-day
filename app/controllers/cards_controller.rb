@@ -1,8 +1,9 @@
 class CardsController < ApplicationController
-  before_action :set_content
+  before_action :set_content, :set_user
 
   def new
     @card = Card.new
+    
   end
 
   def create
@@ -36,10 +37,14 @@ class CardsController < ApplicationController
 
   private
   def card_params
-    params.require(:card).permit(:title, :comment, :datetime).merge(content_id: params[:content_id])
+    params.require(:card).permit(:title, :comment, :datetime).merge(content_id: params[:content_id]).merge(user_id: current_user.id)
   end
 
   def set_content
     @content = Content.find(params[:content_id])
+  end
+
+  def set_user
+    @user = User.find_by(id: current_user.id)
   end
 end

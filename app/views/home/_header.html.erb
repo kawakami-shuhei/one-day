@@ -4,7 +4,7 @@
   </div>
   <% if user_signed_in? %>
     <div class="logout">
-      <%= link_to destroy_user_session_path do %>
+      <%= link_to destroy_user_session_path, method: "delete" do %>
         <div class="log-out">
           <h2 class="log-out__text">ログアウト</h2>
         </div>
@@ -24,6 +24,6 @@
           <h2 class="new-user__text">新規登録</h2>
         </div>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
