@@ -9,7 +9,8 @@
       </h2>
     <% end %>
     <div class="task-content__list-box">
-      <%= content.cards.each do |card| %>
+      <% content.cards.each do |card| %>
+      <% if card.user_id == current_user.id %>
         <div class="task-content__list-box__div">
           <%= link_to content_card_path(content,card) do %>
             <div class="task-content__list-box__div-card">
@@ -22,6 +23,7 @@
             </div>
           <% end %>
         </div>
+      <% end %>
       <% end %>
     </div>
   </div>

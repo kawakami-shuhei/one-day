@@ -1,4 +1,7 @@
 $(function() {
+  $('.header').click(function(){
+    console.log('DADA')
+  })
 
   $(".task-content__list-box__div-card").hover(function() {
     console.log(this)
