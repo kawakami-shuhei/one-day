@@ -66,3 +66,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'ranked-model'
+
+group :production do
+  gem 'pg'
+end
