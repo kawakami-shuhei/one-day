@@ -35,9 +35,14 @@ class CardsController < ApplicationController
     redirect_to root_path
   end
 
+  def sort
+    @card = Card.find(params[:card_id])
+    card.update(card_params)
+  end
+
   private
   def card_params
-    params.require(:card).permit(:title, :comment, :datetime).merge(content_id: params[:content_id]).merge(user_id: current_user.id)
+    params.require(:card).permit(:title, :comment, :datetime, :row_order_position).merge(content_id: params[:content_id]).merge(user_id: current_user.id)
   end
 
   def set_content

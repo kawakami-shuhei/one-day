@@ -1,3 +1,4 @@
+<%# <%= content_tag "tr", id: "card-#{card.id}", class: "item", data: { model_name: card.class.name.underscore, update_url: card_sort_path(card)} do %>
 <div class="task-content">
   <div class="task-content__list">
     <h2 class="task-content__list-title">
@@ -5,7 +6,7 @@
     </h2>
     <%= link_to new_content_card_path(content) do %>
       <h2 class="task-content__list-add">
-        カードを追加
+        カードを作成
       </h2>
     <% end %>
     <div class="task-content__list-box">
@@ -28,3 +29,4 @@
     </div>
   </div>
 </div>
+<%# <% end %>
