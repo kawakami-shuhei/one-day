@@ -53,5 +53,5 @@ production:
   username: ba7397a85095c0
   password: <%= ENV['9b493295'] %>
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   pool: 5
