@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null:false|
+|password|string|null:false|
 
-Things you may want to cover:
+### Association
+- has_many :crads
+- has_many :contents
 
-* Ruby version
 
-* System dependencies
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null:false|
+|comment|string|null:false|
+|datetime|datetime|null:false|
+|user|references|null:false,foreigner_key:true|
+|content|references|null:false,foreigner_key:true|
 
-* Configuration
+### Association
+- belongs_to :users
+- belongs_to :contents
 
-* Database creation
 
-* Database initialization
+## contentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|string|null:false|
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- has_many :crads
+- belongs_to :users
