@@ -52,6 +52,6 @@ production:
   database: heroku_71882dc756114fb
   username: ba7397a85095c0
   password: <%= ENV['9b493295'] %>
-  # adapter: postgresql
-  # encoding: unicode
-  # pool: 5
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
