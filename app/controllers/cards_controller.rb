@@ -38,6 +38,7 @@ class CardsController < ApplicationController
   def sort
     @card = Card.find(params[:card_id])
     card.update(card_params)
+    render body: nil
   end
 
   private
