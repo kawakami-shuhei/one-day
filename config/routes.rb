@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :home
   resources :contents do
-    resources :cards do
-      put :sort
-    end
+    resources :cards
   end
 end

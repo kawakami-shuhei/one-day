@@ -73,3 +73,19 @@
     }
   }
 }
+
+.card-home{
+  &__box{
+    background: gray;
+    width: 100%;
+    height: 50px;
+    margin-top: 40px; 
+
+    &-button{
+      text-align: center;
+      padding-top: 5px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+}

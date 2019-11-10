@@ -1,4 +1,8 @@
 class Card < ApplicationRecord
+
+  validates :title, presence: true
+  validates :datetime, presence: true
+
   belongs_to :user
   belongs_to :content
   

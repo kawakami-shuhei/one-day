@@ -39,14 +39,6 @@ $(function() {
     $(this).css("background", "");
   });
 
-  $(".card-add").hover(function() {
-    console.log(this)
-    $(this).css("background", "rgb(224, 224, 224)");
-    
-  }, function() {
-    $(this).css("background", "");
-  });
-
   $(".log-out").hover(function() {
     console.log(this)
     $(this).css("background", "rgb(224, 224, 224)");
@@ -72,6 +64,14 @@ $(function() {
   });
 
   $(".submit").hover(function() {
+    console.log(this)
+    $(this).css("background", "rgb(224, 224, 224)");
+    
+  }, function() {
+    $(this).css("background", "");
+  });
+
+  $(".card-home__box").hover(function() {
     console.log(this)
     $(this).css("background", "rgb(224, 224, 224)");
     

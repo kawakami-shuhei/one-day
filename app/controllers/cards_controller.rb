@@ -21,12 +21,13 @@ class CardsController < ApplicationController
 
   def edit
     @card = Card.find(params[:id])
+    @contents = Content.all
   end
 
   def update
     @card = Card.find(params[:id])
-    @card.update(card_params)
-    redirect_to content_card_path
+    @card.update(edit_params)
+    redirect_to root_path
   end
 
   def destroy
@@ -35,15 +36,13 @@ class CardsController < ApplicationController
     redirect_to root_path
   end
 
-  def sort
-    @card = Card.find(params[:card_id])
-    card.update(card_params)
-    render body: nil
-  end
-
   private
   def card_params
-    params.require(:card).permit(:title, :comment, :datetime, :row_order_position).merge(content_id: params[:content_id]).merge(user_id: current_user.id)
+    params.require(:card).permit(:title, :comment, :datetime, :content_id).merge(content_id: params[:content_id]).merge(user_id: current_user.id)
+  end
+
+  def edit_params
+    params.require(:card).permit(:title, :comment, :datetime, :content_id).merge(user_id: current_user.id)
   end
 
   def set_content

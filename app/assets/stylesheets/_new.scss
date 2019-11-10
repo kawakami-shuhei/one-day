@@ -22,7 +22,7 @@
       .card-title{
         width: 100%;
         height: 50px;
-        margin-top: 40px;  
+        margin-top: 30px;  
         padding: 10px;
       }
 
@@ -30,7 +30,7 @@
         font-size: 25px;
         display: inline-block;
         margin-right: 30px;
-        margin-top: 40px;
+        margin-top: 30px;
       }
 
       .card-date{
@@ -38,17 +38,29 @@
         width: 70px;
       }
 
+      .content-data{
+        font-size: 25px;
+        display: inline-block;
+        margin-right: 30px;
+        margin-top: 30px;
+      }
+
+      .card-move{
+        height: 40px;
+        width: 130px;
+      }
+
       .card-comment{
         width: 100%;
         height: 350px;
-        margin-top: 40px; 
+        margin-top: 30px; 
         padding: 10px;
       }
 
       .card-button{
         width: 100%;
         height: 50px;
-        margin-top: 40px; 
+        margin-top: 30px; 
         background: gray;
         font-size: 20px;
         font-weight: bold;
