@@ -49,9 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: one-day_production
-  username: one-day
-  password: <%= ENV['ONE-DAY_DATABASE_PASSWORD'] %>
+  database: heroku_71882dc756114fb
+  username: ba7397a85095c0
+  password: <%= ENV['9b493295'] %>
   # adapter: postgresql
   # encoding: unicode
   # pool: 5
